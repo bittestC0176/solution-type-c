@@ -22,16 +22,15 @@ public class GameResult implements Comparator<GameResult>{
 
 	@Override
 	public int compare(GameResult a, GameResult b) {
-		if(a.success>b.success) {
+		if(a.success == b.success) {
 			if(a.time<b.time) {
 				return 1;
 			}
+			return -1;
+		}else if(a.success > b.success){
 			return -1;
 		}else {
-			if(a.time<b.time) {
-				return 1;
-			}
-			return -1;
+			return 1;
 		}
 	}
 }

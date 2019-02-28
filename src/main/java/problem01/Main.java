@@ -40,11 +40,12 @@ public class Main {
 	
 	public static boolean checkAnswer(int answer) {
 		count++;
+		System.out.println(count);
 		if(answer==randomNumber)
 			return true;
-		else if(answer<min)
+		else if(answer<randomNumber)
 			min = answer;
-		else if(answer>max)
+		else if(answer>randomNumber)
 			max = answer;
 		return false;
 	}
